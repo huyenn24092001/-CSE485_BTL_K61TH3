@@ -1,4 +1,4 @@
-.sign-container{
+.signup-container{
     width: 100%;
     height: 100vh;
     display: grid;
@@ -17,9 +17,32 @@
     width: 100rem;
     margin: auto;
     align-items: flex-end;
+    
+}
+.nav-header-signUp ul li{
+    padding: 0 2.5rem;
+    position: relative;
+    list-style-type: none;
+}
+.nav-header-signUp ul li:last-child{
+    margin-left: auto;
+}
+.nav-header-signUp ul li::after{
+    content: "";
+    width: 100%;
+    height: 0.4rem;
+    background: #1aa1f5;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ;
+}
+.nav-header-signUp ul li:hover::after{
+    opacity: 1;
 }
 .form-container{
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 2/3;
     background: #fff;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -28,16 +51,13 @@
     grid-auto-columns: 10rem 8fr;
     grid-template-rows: 2fr 1fr;
 }
-.nav-header-signUp ul li{
-        padding: 0 2.5rem;
-        position: relative;
-}
+
  .nav-header-signUp a{
-    font-size: 3rem;
-    color: #1aa1f5;
+    font-size: 1.5rem;
+    color: #555;
  }
 .form-content{
-    grid-column: 2/-1;
+    grid-column: 2;
     grid-row: 1/2;
     padding: 5rem 0 1rem 0;
 }
@@ -52,22 +72,55 @@
 .form-group{
     margin-bottom: 2rem;
 }
-form.form-group label{
+form .form-group label{
     font-size: 1.6rem;
     font-weight: 300;
     margin-right: 1rem;
     margin-bottom: 1rem;
     display: block;
 }
-form input{
+form input:not(.form-checkbox){
     width: 30rem;
     display: block;
-    height: 3.5rem;
+    height: 2.8rem;
     border: 0.1rem solid #ddd;
     border-radius: 0.5rem;
     font-size: 1rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
-form input: :focus{
+form input:not(.form-checkbox):focus{
     background-color: #d9ebf7;
+}
+.btn-form{
+padding: 1rem 1.5rem;
+background: #1aa1f5;
+color: #fff;
+border-radius: 4rem;
+border: 0.1rem solid #1aa1f5;
+cursor: pointer;
+font-size: 1.5rem;
+font-weight: bold;
+margin-right: 1rem;
+}
+.form-checkbox label{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.form-footer{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    background: #edf3f7;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.form-footer p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+.form-footer a:hover{
+    text-decoration: underline;
 }

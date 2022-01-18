@@ -1,14 +1,24 @@
 <?php
-   $pagetitle ='SignUp | Twitter';
-?>
+   $pagetitle ='Đăng ký | Twitter';
+   include 'backend/shared/header.php'; 
+  
+   ?>
 
-<?php include 'backend/shared/head.php'
-?>
 <section class="signup-container">
    <nav class="nav-header-signUp">
       <ul>
          <li>
       <a href="#"><i class="bi bi-twitter"></i></a>
+         </li>
+         <li> 
+            <a href='#'>
+               Đăng ký
+            </a>
+         </li>
+         <li>
+            <a href="#">
+               Ngôn ngữ: Tiếng Việt
+            </a>
          </li>
       </ul>
    </nav>
@@ -40,8 +50,13 @@
             </div>
             <div class="form-btn">
                <button type="submit" class="btn-form">Tạo tài khoản</button>
+               <input type="checkbox" class ="form-checkbox" id="check" name="remember">
+               <lable for="remember"> Ghi nhớ </lable>
             </div>
          </form>
+         <footer class="form-footer">
+          <p> Đã có tài khoản? <a href="login.php">Đăng nhập ngay bây giờ</a></p>
+      </footer>
       </div>
    </div>
 </section>
