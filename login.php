@@ -1,7 +1,8 @@
 <?php
    $pagetitle ='Đăng nhập | Twitter';
- include 'backend/shared/header.php'?>
- 
+ include 'backend/shared/header.php';
+  include_once "backend/initialize.php";
+  ?>
   <section class="signup-container">
   <?php include 'backend/shared/loginnav.php'; ?>
   
@@ -10,7 +11,7 @@
          <h2 class="header-content">
             Đăng nhập tài khoản
          </h2>
-         <form action="" class="form1"<?php echo h($_SEVER["PHP_SELF"]);?>" method="POST">
+         <form action="" class="form1" action="<?php echo h($_SEVER["PHP_SELF"]);?>" method="POST">
             <div class="form-group">
                <label for="username">Email hoặc tên đăng nhập</label>
                <input type="text" name="username" id="username"autocomplete="off" required>

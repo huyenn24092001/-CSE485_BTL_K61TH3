@@ -1,6 +1,6 @@
 <?php
  include 'backend/initialize.php';
- echo $db->public;
+ // $db->public;
 
  include 'backend/shared/header.php';
      

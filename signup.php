@@ -6,18 +6,18 @@
    //  $input=htmlspecialchars($input);
    // return $input;}
 
-   if(is_post_request(){
-      if(isset($_POST['Name1'])&& !empty($_POST['Name1'])){
-         $fname=formSanitizer::formSanitizerName($_POST['Name1']);
-         $lname=formSanitizer::formSanitizerName($_POST['Name2']);
-         $email=formSanitizer::formSanitizerString($_POST['email']);
-         $pass=formSanitizer::formSanitizerString($_POST['pass1']);
-         $pass2=formSanitizer::formSanitizerString($_POST['pass2']);
-         $username="TODO";
+   //if(is_post_request()){
 
-         $account->register($fname,$lname,$username,$email,$pass,$pass2);
-      }
-   });
+      //if(isset($_POST['Name1'])&& !empty($_POST['Name1'])){
+        // $fname=formSanitizer::formSanitizerName($_POST['Name1']);
+       //  $lname=formSanitizer::formSanitizerName($_POST['Name2']);
+        // $email=formSanitizer::formSanitizerString($_POST['mail']);
+        // $pass=formSanitizer::formSanitizerString($_POST['pass1']);
+       //  $pass2=formSanitizer::formSanitizerString($_POST['pass2']);
+
+        // $account->register($fname,$lname,$username,$email,$pass,$pass2);
+      //}
+  // }
 
    $pagetitle ='Đăng ký | Twitter';
    include 'backend/shared/header.php'; 
@@ -49,6 +49,7 @@
          </h2>
          <form action="" class="form1" action="<?php echo h($_SEVER["PHP_SELF"]);?>" method="POST">
             <div class="form-group">
+              
                <label for="Name1">Họ</label>
                <input type="text" name="Name1" id="Name1" autocomplete="off" required>
             </div>
