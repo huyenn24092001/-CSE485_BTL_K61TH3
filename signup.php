@@ -55,7 +55,7 @@
             </div>
          </form>
          <footer class="form-footer">
-          <p> Đã có tài khoản? <a href="login.php">Đăng nhập ngay bây giờ</a></p>
+          <p> Đã có tài khoản? <a href="login.php">Đăng nhập ngay </a></p>
       </footer>
       </div>
    </div>
