@@ -1,4 +1,5 @@
-
+<?php include 'backend/shared/head.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,6 @@
     
 <body >
 
-
 <main>
 <div class="main">
   <div class="left">
@@ -34,10 +34,10 @@
   
    <h1> Đang diễn ra ngay bây giờ <h1>
    <h4> Tham gia Twitter ngay hôm nay. <h4>
-   <a href="login.php" class="login"><i class="bi bi-apple"></i> Đăng ký bằng Apple</a>
-   <a href="login.php" class="login1">Đăng ký bằng số điện thoại hoặc email</a>
+   <a href="signUp.php" class="login"><i class="bi bi-apple"></i> Đăng ký bằng Apple</a>
+   <a href="signUp.php" class="login1">Đăng ký bằng số điện thoại hoặc email</a>
    <h3 class= "h3 mt-5 "> Đã có tài khoản? <h3>
-   <a href="signUp.php" class="login2">Đăng nhập</a>
+   <a href="login.php" class="login2">Đăng nhập</a>
  </div>
 </div>
 <footer class="main-footer" role =" contentinfo">
