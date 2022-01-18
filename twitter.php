@@ -1,4 +1,10 @@
-<?php include 'backend/shared/header.php' ?>
+<?php
+ include 'backend/initialize.php';
+ echo $db->public;
+
+ include 'backend/shared/header.php';
+     
+?>
 
 
     

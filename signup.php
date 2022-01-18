@@ -1,4 +1,24 @@
 <?php
+   include_once "backend/initialize.php";
+   
+  // function formSanitizer($input){
+   //   $input=trim(strip_tags($input));
+   //  $input=htmlspecialchars($input);
+   // return $input;}
+
+   if(is_post_request(){
+      if(isset($_POST['Name1'])&& !empty($_POST['Name1'])){
+         $fname=formSanitizer::formSanitizerName($_POST['Name1']);
+         $lname=formSanitizer::formSanitizerName($_POST['Name2']);
+         $email=formSanitizer::formSanitizerString($_POST['email']);
+         $pass=formSanitizer::formSanitizerString($_POST['pass1']);
+         $pass2=formSanitizer::formSanitizerString($_POST['pass2']);
+         $username="TODO";
+
+         $account->register($fname,$lname,$username,$email,$pass,$pass2);
+      }
+   });
+
    $pagetitle ='Đăng ký | Twitter';
    include 'backend/shared/header.php'; 
   
@@ -27,26 +47,26 @@
          <h2 class="header-content">
             Tạo tài khoản của bạn
          </h2>
-         <form action="" class="form1">
+         <form action="" class="form1" action="<?php echo h($_SEVER["PHP_SELF"]);?>" method="POST">
             <div class="form-group">
                <label for="Name1">Họ</label>
-               <input type="text" name="Name1" id="Name1">
+               <input type="text" name="Name1" id="Name1" autocomplete="off" required>
             </div>
             <div class="form-group">
                <label for="Name2">Tên</label>
-               <input type="text" name="Name1" id="Name1">
+               <input type="text" name="Name2" id="Name2" autocomplete="off" required>
             </div>
             <div class="form-group">
                <label for="mail">Email</label>
-               <input type="email" name="mail" id="mail">
+               <input type="email" name="mail" id="mail"autocomplete="off" required>
             </div>
             <div class="form-group">
                <label for="pass1">Mật khẩu</label>
-               <input type="password" name="pass1" id="pass1">
+               <input type="password" name="pass1" id="pass1"autocomplete="off" required>
             </div>
             <div class="form-group">
                <label for="pass2">Nhập lại mật khẩu</label>
-               <input type="password" name="pass2" id="pass2">
+               <input type="password" name="pass2" id="pass2"autocomplete="off" required>
             </div>
             <div class="form-btn">
                <button type="submit" class="btn-form">Tạo tài khoản</button>

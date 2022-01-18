@@ -10,15 +10,15 @@
          <h2 class="header-content">
             Đăng nhập tài khoản
          </h2>
-         <form action="" class="form1">
+         <form action="" class="form1"<?php echo h($_SEVER["PHP_SELF"]);?>" method="POST">
             <div class="form-group">
                <label for="username">Email hoặc tên đăng nhập</label>
-               <input type="text" name="username" id="username">
+               <input type="text" name="username" id="username"autocomplete="off" required>
             </div>
         
             <div class="form-group">
                <label for="pass1">Mật khẩu</label>
-               <input type="password" name="pass1" id="pass1">
+               <input type="password" name="pass1" id="pass1"autocomplete="off" required>
             </div>
             
             <div class="form-btn">
