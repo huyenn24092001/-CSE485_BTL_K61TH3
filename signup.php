@@ -1,23 +1,23 @@
 <?php
    include_once "backend/initialize.php";
    
-  // function formSanitizer($input){
-   //   $input=trim(strip_tags($input));
-   //  $input=htmlspecialchars($input);
-   // return $input;}
+   function formSanitizer($input){
+     $input=trim(strip_tags($input));
+   $input=htmlspecialchars($input);
+   return $input;}
 
-   //if(is_post_request()){
+   if(is_post_request()){
 
-      //if(isset($_POST['Name1'])&& !empty($_POST['Name1'])){
-        // $fname=formSanitizer::formSanitizerName($_POST['Name1']);
-       //  $lname=formSanitizer::formSanitizerName($_POST['Name2']);
-        // $email=formSanitizer::formSanitizerString($_POST['mail']);
-        // $pass=formSanitizer::formSanitizerString($_POST['pass1']);
-       //  $pass2=formSanitizer::formSanitizerString($_POST['pass2']);
+      if(isset($_POST['Name1'])&& !empty($_POST['Name1'])){
+         $fname=formSanitizer::formSanitizerName($_POST['Name1']);
+        $lname=formSanitizer::formSanitizerName($_POST['Name2']);
+         $email=formSanitizer::formSanitizerString($_POST['mail']);
+         $pass=formSanitizer::formSanitizerString($_POST['pass1']);
+        $pass2=formSanitizer::formSanitizerString($_POST['pass2']);
 
-        // $account->register($fname,$lname,$username,$email,$pass,$pass2);
-      //}
-  // }
+         $account->register($fname,$lname,$username,$email,$pass,$pass2);
+      }
+  }
 
    $pagetitle ='Đăng ký | Twitter';
    include 'backend/shared/header.php'; 

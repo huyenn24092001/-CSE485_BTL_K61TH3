@@ -4,7 +4,7 @@ ob_start();
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 
 
-include 'classes/Database.php';
+ include 'classes/Database.php';
 
 
 define("DB_HOST","localhost");
@@ -15,6 +15,8 @@ $public_end=strpos($_SERVER['SCRIPT_NAME'],'/frontend')+9;
 $doc_root=substr($_SERVER['SCRIPT_NAME'],0,$public_end);
 define("WW_ROOT",$doc_root);
 
+
+// @account-new Account;
 
 include 'functions.php';
 
